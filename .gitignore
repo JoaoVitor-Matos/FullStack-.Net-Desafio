@@ -1,0 +1,20 @@
+# === .NET ===
+**/bin/
+**/obj/
+**/Properties/launchSettings.json
+*.user
+*.suo
+
+# Ignora secrets de dev
+**/appsettings.Development.json
+
+# === Node / React (Vite) ===
+web/node_modules/
+web/dist/
+web/.vite/
+
+# === Outros arquivos de cache ou editor ===
+.vscode/
+.env
+.DS_Store
+Thumbs.db
