@@ -9,7 +9,7 @@ import { LeadCard } from '../components/leadcard';
 import { Navbar } from '../components/navbar';
 import { AxiosError } from 'axios';
 
-// Interface para o formato do erro retornado pela API
+
 interface ApiErrorResponse {
   message?: string;
 }
@@ -33,7 +33,7 @@ export default function InvitedPage() {
 
   const handleAccept = async (id: number) => {
     try {
-      // Encontrar o lead pelo ID para obter o nome
+      
       const lead = leads.find((l) => l.id === id);
       if (!lead) {
         throw new Error('Lead não encontrado');
@@ -43,10 +43,10 @@ export default function InvitedPage() {
       await acceptLead(id);
       console.log(`Lead ${id} aceito com sucesso`);
       
-      // Exibir mensagem com o nome do lead
+      
       alert(`${lead.contactFirstName || 'Lead'} aceito`);
       
-      await loadLeads(); // Recarrega os leads para garantir consistência
+      await loadLeads(); 
     } catch (err) {
       const error = err as AxiosError<ApiErrorResponse>;
       console.error('Erro ao aceitar lead:', err);
@@ -57,7 +57,7 @@ export default function InvitedPage() {
 
   const handleDecline = async (id: number) => {
     try {
-      // Encontrar o lead pelo ID para obter o nome
+     
       const lead = leads.find((l) => l.id === id);
       if (!lead) {
         throw new Error('Lead não encontrado');
@@ -67,10 +67,10 @@ export default function InvitedPage() {
       await declineLead(id);
       console.log(`Lead ${id} recusado com sucesso`);
       
-      // Exibir mensagem com o nome do lead
+      
       alert(`${lead.contactFirstName || 'Lead'} recusado`);
       
-      await loadLeads(); // Recarrega os leads para garantir consistência
+      await loadLeads(); 
     } catch (err) {
       const error = err as AxiosError<ApiErrorResponse>;
       console.error('Erro ao recusar lead:', err);
