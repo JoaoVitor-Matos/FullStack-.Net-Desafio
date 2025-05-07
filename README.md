@@ -100,7 +100,7 @@ npm run dev
 6. Os leads irão para `/accepted` ou `/declined`
 
 ## 📷 Prints
-![Tela de convidados](./images/Leads1.png)
+![Tela de convidados](./images/leads1.png)
 ![Tela de aceitos](./images/leads2.png)
 ![Tela de recusados](./images/leads3.png)
 ![Tela de novo lead](./images/leads4.png)
