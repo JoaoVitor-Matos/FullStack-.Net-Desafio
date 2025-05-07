@@ -33,7 +33,7 @@ public class LeadsController : ControllerBase
     [HttpPost("{id}/accept")]
     public async Task<IActionResult> AcceptLead(int id)
     {
-        var lead = await _leadService.GetLeadByIdAsync(id); // Adicione este método ao LeadService
+        var lead = await _leadService.GetLeadByIdAsync(id); 
         if (lead == null)
             return NotFound(new { message = "Lead não encontrado" });
 
@@ -44,7 +44,7 @@ public class LeadsController : ControllerBase
     [HttpPost("{id}/decline")]
     public async Task<IActionResult> DeclineLead(int id)
     {
-        var lead = await _leadService.GetLeadByIdAsync(id); // Adicione este método ao LeadService
+        var lead = await _leadService.GetLeadByIdAsync(id); 
         if (lead == null)
             return NotFound(new { message = "Lead não encontrado" });
 
