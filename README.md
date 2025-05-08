@@ -95,6 +95,7 @@ npm run dev
 Verifique se a porta usada no backend (ex.: `http://localhost:5085`) está correta nos seguintes arquivos do frontend:
 
 - `web/src/pages/new.tsx`
+- - `web/src/pages/declined.tsx`
 - `web/src/services/leadService.ts`
 
 Exemplo de ajuste:
