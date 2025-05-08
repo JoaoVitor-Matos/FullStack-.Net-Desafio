@@ -90,6 +90,22 @@ npm run dev
 
 ---
 
+### ⚠️ Ajuste a porta da API no frontend
+
+Verifique se a porta usada no backend (ex.: `http://localhost:5085`) está correta nos seguintes arquivos do frontend:
+
+- `web/src/pages/new.tsx`
+- `web/src/services/leadService.ts`
+
+Exemplo de ajuste:
+
+```ts
+const api = axios.create({
+  baseURL: 'http://localhost:5085/api/leads'
+});
+```
+---
+
 ## 🧪 Teste rápido
 
 1. Vá para `http://localhost:5173`
